@@ -22,6 +22,7 @@ for info in scraped_info:
     except:
         data["Precio"]=None
     list_data.append(data) 
-    print(data)
-print("---------------------")
-print(list_data)
+
+data_frame = pandas.DataFrame(list_data)
+print(data_frame)
+data_frame.to_csv("craiglist_rav4.csv") #Generate csv file with the scraped info.
